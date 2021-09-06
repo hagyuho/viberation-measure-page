@@ -5,25 +5,24 @@ const UserStore =  observable({
 
     userList:[],
 
-    async getUsers(){
-        try{
-        let res = await axios.get("http://localhost:8080/api/aflist");
-        console.log(res);
-
-        runInAction(()=>{
+    //전체유저 조회
+    getUsers(){
+        axios.get("http://localhost:8080/api/aflist")
+        .then((res)=>{
+            console.log(res)
             this.userList = [...res.data]; 
-        });    
-        }catch(err){
+        })
+        .catch((err)=>{
             console.log(err)
-        }
+        });
     },  
 
     createUser(req){
-        try{
-            let res = axios.post("http://localhost:8080/api/aflist",req);
-        }catch(err){
-            console.log(err);
-        }
+            axios.post("http://localhost:8080/api/aflist",req)
+            .then(()=> this.getUsers())
+            .catch((error)=>{
+                alert(error);
+            })
     },
 
 });

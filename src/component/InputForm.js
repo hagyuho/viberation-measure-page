@@ -17,7 +17,7 @@ const InputForm = () => {
 
     const handleOnClick = () => {
         UserStore.createUser(inputForm);
-        alert("등록되었습니다.")
+        alert("등록되었습니다. ")
         setInputForm({
             'name':'',
             "interest":'',
