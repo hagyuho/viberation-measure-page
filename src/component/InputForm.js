@@ -19,9 +19,9 @@ const InputForm = () => {
         UserStore.createUser(inputForm);
         alert("등록되었습니다.")
         setInputForm({
-            "name":"",
-            "interest":"",
-            "retireDday":"",
+            'name':'',
+            "interest":'',
+            "retireDday":'',
             
         })
     }
