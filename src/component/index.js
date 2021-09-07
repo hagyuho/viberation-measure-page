@@ -1,11 +1,11 @@
 import React from 'react';
 import InputForm from './InputForm';
-import PeopleList from './PeopleList';
+import PeopleListTemplete from './PeopleListTemplete';
 
 const TestPage = () => {
     return (
         <div>
-          <PeopleList/>
+          <PeopleListTemplete/>
           <InputForm/>
         </div>
     );

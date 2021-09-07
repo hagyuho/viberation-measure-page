@@ -26,9 +26,6 @@ const InputForm = () => {
         })
     }
 
-    const create = (inputForm) => {
-        UserStore.createUser(inputForm);
-    }
 
     return (
         <div>

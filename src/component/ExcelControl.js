@@ -2,7 +2,12 @@ import React from "react";
 import { CSVLink } from "react-csv";
 
 const ExcelControl = (props) => {
-  const { data, headers } = props;
+  const { data } = props;
+  const headers = [
+    { label: "Name", key: "name" },
+    { label: "Interest", key: "interest" },
+    { label: "retireDday", key: "retireDday" },
+  ];
 
   return (
     <div>
